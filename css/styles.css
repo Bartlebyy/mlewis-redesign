@@ -215,6 +215,7 @@ section{ padding: 4.6rem 0; }
   font-family: var(--f-mono); color: var(--brass); font-size: 12px; letter-spacing:.1em;
 }
 .specialty h3{ margin-top:.5rem; font-size: 1.05rem; }
+.specialty p{ margin-top:.4rem; margin-bottom:0; font-size:.92rem; }
 
 /* ---------- latest release card ---------- */
 .release{
@@ -246,12 +247,12 @@ section{ padding: 4.6rem 0; }
 }
 .photo-frame .photo-placeholder svg{ width:28px; height:28px; opacity:.6; }
 .photo-frame .photo-placeholder small{ font-size:10px; letter-spacing:.05em; max-width:220px; line-height:1.5; text-transform:none; opacity:.85; }
-.release blockquote{
+blockquote{
   font-family: var(--f-display); font-size: 1.1rem; font-style: italic; color: var(--smoke);
   border-left: 2px solid var(--brass); padding-left: 1.1rem; margin: 1.4rem 0;
 }
-.on-paper .release blockquote{ color: #4a4436; }
-.release cite{ display:block; font-family: var(--f-mono); font-size:11px; letter-spacing:.08em; color: var(--brass); margin-top:.4rem; font-style:normal; }
+.on-paper blockquote{ color: #4a4436; }
+cite{ display:block; font-family: var(--f-mono); font-size:11px; letter-spacing:.08em; color: var(--brass); margin-top:.4rem; font-style:normal; }
 
 /* ---------- bio intro (photo + timeline lede) ---------- */
 .bio-grid{ display:grid; grid-template-columns: .8fr 1.2fr; gap: 3rem; align-items:start; margin-bottom: 3rem; }
