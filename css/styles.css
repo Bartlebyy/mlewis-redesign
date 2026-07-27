@@ -222,6 +222,7 @@ section{ padding: 4.6rem 0; }
   font-family: var(--f-display); font-size: 1.1rem; font-style: italic; color: var(--smoke);
   border-left: 2px solid var(--brass); padding-left: 1.1rem; margin: 1.4rem 0;
 }
+.on-paper .release blockquote{ color: #4a4436; }
 .release cite{ display:block; font-family: var(--f-mono); font-size:11px; letter-spacing:.08em; color: var(--brass); margin-top:.4rem; font-style:normal; }
 
 /* ---------- timeline (bio) ---------- */
@@ -266,10 +267,13 @@ section{ padding: 4.6rem 0; }
 .track .tcredit{ font-family: var(--f-mono); font-size: 11.5px; color: var(--smoke-dim); text-transform:uppercase; letter-spacing:.05em; }
 .track audio{ height:32px; width: 220px; max-width: 40vw; }
 .track audio::-webkit-media-controls-panel{ background: var(--ink-raised); }
+.on-paper .track .ttitle{ color: var(--paper-ink); }
+.on-paper .track .tcredit{ color: #6b6452; }
 
 .player-note{
   font-family: var(--f-mono); font-size:12px; color: var(--smoke-dim); margin-top: 1.2rem;
 }
+.on-paper .player-note{ color: #6b6452; }
 
 /* ---------- gallery ---------- */
 .gallery-grid{
