@@ -353,15 +353,15 @@ cite{ display:block; font-family: var(--f-mono); font-size:11px; letter-spacing:
 /* lightbox */
 .lightbox{
   position: fixed; inset:0; background: rgba(10,12,16,.94); display:none;
-  align-items:center; justify-content:center; z-index: 100; padding: 4vh 4vw;
+  flex-direction: column; align-items:center; justify-content:center; z-index: 100; padding: 4vh 4vw; gap: 1rem;
 }
 .lightbox.open{ display:flex; }
-.lightbox img{ max-height: 88vh; max-width: 92vw; border:1px solid var(--ink-line); }
+.lightbox img{ max-height: 80vh; max-width: 92vw; border:1px solid var(--ink-line); }
 .lightbox .lb-close{
   position:absolute; top: 22px; right: 26px; background:none; border:1px solid var(--ink-line);
   color: var(--smoke); width:42px; height:42px; border-radius:50%; cursor:pointer; font-size:18px;
 }
-.lightbox .lb-cap{ position:absolute; bottom: 26px; left:0; right:0; text-align:center; font-family: var(--f-mono); font-size:12px; color: var(--smoke-dim); letter-spacing:.05em;}
+.lightbox .lb-cap{ max-width: 92vw; text-align:center; font-family: var(--f-mono); font-size:13px; color: var(--smoke); letter-spacing:.03em; line-height:1.5; }
 
 /* ---------- contact ---------- */
 .contact-grid{ display:grid; grid-template-columns: .9fr 1.1fr; gap: 3.5rem; }
