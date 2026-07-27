@@ -151,6 +151,8 @@ nav.primary a[aria-current="page"]::after{
   background:
     radial-gradient(ellipse 900px 500px at 15% -10%, rgba(192,143,76,.10), transparent 60%);
 }
+.hero-grid{ display:grid; grid-template-columns: 1.3fr .9fr; gap: 3.5rem; align-items:center; }
+.hero-grid .photo-frame{ --photo-ratio: 4 / 5; }
 .marquee .eyebrow{ display:block; margin-bottom: 1.1rem; }
 .marquee h1{
   font-size: clamp(2.6rem, 7vw, 5.1rem);
@@ -196,6 +198,9 @@ section{ padding: 4.6rem 0; }
 .credibility span{
   padding: .5em .9em; border:1px solid var(--ink-line); border-radius: var(--radius);
 }
+.credibility span.featured{
+  color: var(--brass); border-color: var(--brass); font-weight:600;
+}
 
 /* ---------- specialties grid ---------- */
 .specialties{
@@ -218,12 +223,38 @@ section{ padding: 4.6rem 0; }
   border:1px solid var(--ink-line); padding: 10px; background: var(--ink-raised);
 }
 .release .cover-frame iframe{ border-radius: 2px; width:100%; }
+
+/* ---------- photo placeholders (drop-in slots for real photography) ---------- */
+.photo-frame{
+  position:relative; overflow:hidden; border-radius: var(--radius);
+  border:1px solid var(--ink-line); background: var(--ink-raised);
+  aspect-ratio: var(--photo-ratio, 1 / 1);
+}
+.on-paper .photo-frame{ border-color: var(--paper-line); background: #e2d9bf; }
+.photo-frame img{ width:100%; height:100%; object-fit:cover; }
+.photo-frame .photo-placeholder{
+  position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:.6rem; text-align:center; padding: 1.5rem;
+  font-family: var(--f-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+  color: var(--smoke-dim);
+  background-image: repeating-linear-gradient(135deg, var(--ink-line), var(--ink-line) 1px, transparent 1px, transparent 14px);
+}
+.on-paper .photo-frame .photo-placeholder{
+  color: #6b6452;
+  background-image: repeating-linear-gradient(135deg, var(--paper-line), var(--paper-line) 1px, transparent 1px, transparent 14px);
+}
+.photo-frame .photo-placeholder svg{ width:28px; height:28px; opacity:.6; }
+.photo-frame .photo-placeholder small{ font-size:10px; letter-spacing:.05em; max-width:220px; line-height:1.5; text-transform:none; opacity:.85; }
 .release blockquote{
   font-family: var(--f-display); font-size: 1.1rem; font-style: italic; color: var(--smoke);
   border-left: 2px solid var(--brass); padding-left: 1.1rem; margin: 1.4rem 0;
 }
 .on-paper .release blockquote{ color: #4a4436; }
 .release cite{ display:block; font-family: var(--f-mono); font-size:11px; letter-spacing:.08em; color: var(--brass); margin-top:.4rem; font-style:normal; }
+
+/* ---------- bio intro (photo + timeline lede) ---------- */
+.bio-grid{ display:grid; grid-template-columns: .8fr 1.2fr; gap: 3rem; align-items:start; margin-bottom: 3rem; }
+.bio-grid .photo-frame{ --photo-ratio: 4 / 5; }
 
 /* ---------- timeline (bio) ---------- */
 .timeline{ position:relative; margin-left: 6px; }
@@ -255,6 +286,7 @@ section{ padding: 4.6rem 0; }
   white-space:nowrap;
 }
 .credit-wall span.more{ color: var(--brass); border-color: var(--brass); border-style:dashed; }
+.credit-wall span.featured{ color: var(--brass); border-color: var(--brass); font-weight:600; }
 
 /* ---------- listen tracklists ---------- */
 .track-list{ list-style:none; margin:0; padding:0; border-top:1px solid var(--ink-line); }
@@ -339,6 +371,10 @@ footer.site-footer nav a:hover{ color: var(--brass); }
   .specialties{ grid-template-columns: 1fr; }
   .contact-grid{ grid-template-columns: 1fr; }
   .gallery-grid{ grid-template-columns: repeat(2,1fr); }
+  .hero-grid{ grid-template-columns: 1fr; }
+  .hero-grid .photo-frame{ max-width: 340px; margin: 2.5rem auto 0; }
+  .bio-grid{ grid-template-columns: 1fr; }
+  .bio-grid .photo-frame{ max-width: 340px; margin: 0 auto 2.5rem; }
 }
 @media (max-width: 680px){
   nav.primary{
