@@ -279,7 +279,8 @@ cite{ display:block; font-family: var(--f-mono); font-size:11px; letter-spacing:
 .tl-item p{ margin-top:.35rem; }
 
 /* ---------- credits marquee (signature element) ---------- */
-.credits-marquee{ background: var(--ink-raised); border-top:1px solid var(--ink-line); border-bottom:1px solid var(--ink-line); overflow:hidden; }
+.raised, .credits-marquee{ background: var(--ink-raised); border-top:1px solid var(--ink-line); border-bottom:1px solid var(--ink-line); }
+.credits-marquee{ overflow:hidden; }
 .credits-marquee .group-label{
   font-family: var(--f-mono); font-size: 11px; letter-spacing:.14em; text-transform:uppercase; color: var(--brass);
   margin: 2.4rem 0 .9rem;
