@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // page jump nav (about page) — highlight the section currently in view
+  // page jump nav — highlight the section currently in view
   const jumpNav = document.querySelector('.page-jump');
   if (jumpNav) {
     const links = [...jumpNav.querySelectorAll('a')];

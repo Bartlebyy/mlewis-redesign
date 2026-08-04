@@ -32,6 +32,8 @@
 
 *,*::before,*::after{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
+#top, #timeline, #highlights, #stage-credits, #client-list,
+#release-latest, #arrangements, #midi{ scroll-margin-top: 77px; }
 body{
   margin:0;
   background: var(--ink);
