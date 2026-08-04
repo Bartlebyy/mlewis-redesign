@@ -34,37 +34,39 @@
       page schema, and the `listen.html` embed) is still correct at launch time.
 
 ### Gallery captions — fact-check placeholder copy
-The 7 photo captions on `gallery.html` are placeholder narrative text (marked as such on the
-page itself) guessing at what each photo shows, written to match the existing bio. **All 7 need
-Mike's review** — especially:
-- [ ] **Gold record photo**: caption currently says "from one of the productions along the way" —
-      needs the actual artist/album and rough year.
-- [ ] **Barry Gibb photo**: caption doesn't include a date — when was this taken / what project?
-- [ ] Confirm the other 5 captions (sax/touring, sunglasses portrait, two conducting shots, writing
-      desk) are accurate, or replace with the real story behind each.
+The 7 photo captions on `gallery.html` were originally placeholder narrative text. Two are now
+sourced from Mike's own book transcript (see below) and can be considered resolved unless Mike
+corrects them:
+- [x] ~~**Gold record photo**~~ — resolved from the book transcript: it's from the Celia Lipton
+      Farris recordings, arranged/produced at Criteria Studios, early 1980s.
+- [x] ~~**Barry Gibb photo**~~ — resolved from the book transcript: Miami Beach, 1975–76, during
+      Bee Gees string-arrangement sessions at Criteria.
+- [ ] The remaining 5 captions (sax/touring, sunglasses portrait, two conducting shots, writing
+      desk) are still placeholder narrative guesses — the book transcript didn't identify these
+      specific photos. Confirm they're accurate, or replace with the real story behind each.
 
 ### Biography timeline — 1970–2026 gap
-The bio timeline (`about.html`) is detailed and dated from 1938–1970, then has almost nothing
-placed in time for the following 56 years. Six placeholder decade-entries (1970s–2010s) were
-added marking exactly what's missing, each with an embedded question:
-- [ ] **1970s**: which recording-artist credits (Bobby Caldwell, Dr. Hook, KC and the Sunshine
-      Band, etc.) belong in this decade?
-- [ ] **1980s**: when did cruise-line work start (Royal Caribbean / Celebrity / Norwegian / Costa
-      / Royal Olympic / Crystal), and which line came first? Also: what's the gold record for
-      (see Gallery, above)?
-- [ ] **1990s**: the least-documented decade on the whole timeline — where do Rod Stewart, the Bee
-      Gees / Barry Gibb, Willie Nelson, John Mellencamp, or Julio Iglesias fit, or later?
-- [ ] **2000s**: where do the Ray Charles Orchestra, Boca & Palm Beach Pops, Glenn Miller
-      Orchestra, and South Florida Jazz Orchestra credits fit chronologically?
-- [ ] **2010s**: roughly when did the shift into sequenced/Digital Performer composition begin
-      (the original MIDI tracks on the Listen page)? This is a real career pivot and deserves a
-      real date once known.
-- [ ] Once real dates/credits come in, remove the bracketed `[Mike: ...]` questions and the
-      "(placeholder decade)" labels from each `<span class="tl-date">` in `about.html`.
+**Resolved** — the "Digging into 1970–2026" section on `about.html` previously held 13 invented
+placeholder entries. These have been replaced with ~20 real, dated entries sourced directly from
+Mike's own published autobiography (`mike-lewis-book-transcript.md`, supplied 2026-08-04),
+covering *Fountainhead* (1970) through the MLewisPops.com launch (2017) and into the 2026 album.
+Entries were filtered to musical credits only (no personal/family/health details, per the site's
+purpose as a professional booking tool) and kept strictly factual, matching the rest of the
+site's tone.
+- [ ] Mike should still review the new detail-timeline entries for accuracy — they're sourced
+      from his book, but transcription or memory could contain small errors worth double-checking
+      before this is considered final launch copy.
+- [ ] A few names from the client-list credit walls couldn't be dated from the transcript excerpt
+      provided (e.g. Julio Iglesias, the Glenn Miller Orchestra, the Ray Charles Orchestra dates)
+      — these remain undated on the site but don't have placeholder scaffolding calling attention
+      to that; flag if Mike wants them added to the detail timeline too.
 
-### Other copy to verify
-- [ ] Gallery intro text includes a visible parenthetical noting the captions are placeholders —
-      remove that line once real captions are in.
+### Reference: Mike's book transcript
+A transcript excerpt from Mike's autobiography (chapters covering the 1970s–2010s) was supplied
+and used as the primary source for the timeline/caption work above. If further detail passes are
+wanted later — e.g. dating the individual tracks on the Listen page, or covering additional named
+clients/stories from the book not yet reflected on the site — that transcript is the source to
+pull from again.
 
 ## What changed from the old site (summary)
 - Real visual identity (brass/ink/manuscript-paper palette, Fraunces + Inter + IBM Plex Mono type
