@@ -85,6 +85,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // page jump nav (about page) — highlight the section currently in view
+  const jumpNav = document.querySelector('.page-jump');
+  if (jumpNav) {
+    const links = [...jumpNav.querySelectorAll('a')];
+    const sections = links
+      .map(link => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    const setActive = (section) => {
+      links.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${section.id}`));
+    };
+
+    const visible = new Set();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => e.isIntersecting ? visible.add(e.target.id) : visible.delete(e.target.id));
+      const topmost = sections.find(section => visible.has(section.id));
+      if (topmost) setActive(topmost);
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    sections.forEach(section => observer.observe(section));
+
+    // resolve the correct section immediately (observer's first callback can lag
+    // behind a same-page hash landing, e.g. loading /about.html#stage-credits directly)
+    const syncToScroll = () => {
+      const markerY = window.innerHeight * 0.3;
+      const current = [...sections].reverse().find(section => section.getBoundingClientRect().top <= markerY) || sections[0];
+      setActive(current);
+    };
+    syncToScroll();
+    window.addEventListener('hashchange', syncToScroll);
+  }
+
   // contact form (static hosting: wire to Netlify Forms — see form's data-netlify attr)
   const form = document.querySelector('#contact-form');
   if (form) {

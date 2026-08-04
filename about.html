@@ -45,9 +45,19 @@
   </div>
 </header>
 
+<nav class="page-jump" aria-label="Jump to section">
+  <ul>
+    <li><a href="#top"><span>Overview</span></a></li>
+    <li><a href="#timeline"><span>Timeline</span></a></li>
+    <li><a href="#highlights"><span>Highlights</span></a></li>
+    <li><a href="#stage-credits"><span>Stage Credits</span></a></li>
+    <li><a href="#client-list"><span>Client List</span></a></li>
+  </ul>
+</nav>
+
 <main>
 
-  <section class="marquee" style="padding-bottom:3.5rem;">
+  <section class="marquee" id="top" style="padding-bottom:3.5rem;">
     <div class="wrap">
       <span class="eyebrow">About</span>
       <h1 style="font-size:clamp(2.2rem,5vw,3.6rem);">This is what I do.</h1>
@@ -56,7 +66,7 @@
     </div>
   </section>
 
-  <section class="on-paper" aria-labelledby="bio-h">
+  <section class="on-paper" id="timeline" aria-labelledby="bio-h">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Biography</span>
@@ -77,6 +87,11 @@
           <p>Mike Lewis has scored for symphony pops orchestras, Broadway-style revues and cruise-line showrooms
             alike, building a reputation as an arranger who can move fluidly between genres without losing the
             room.</p>
+          <div class="credibility" style="margin-top:1.4rem;">
+            <span class="featured">Horns on 6 KC and the Sunshine Band hits</span>
+            <span class="featured">Shared stages with Sinatra &amp; Ray Charles</span>
+            <span class="featured">Arranged for the Bee Gees &amp; Rod Stewart</span>
+          </div>
         </div>
       </div>
       <div class="timeline">
@@ -126,7 +141,7 @@
     </div>
   </section>
 
-  <section aria-labelledby="detail-h">
+  <section id="highlights" aria-labelledby="detail-h">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Digging into 1970&ndash;2026</span>
@@ -171,7 +186,7 @@
           <span class="tl-date">1978</span>
           <h3>Dr. Hook</h3>
           <p>Arrangements for the album featuring &ldquo;When You&rsquo;re in Love with a Beautiful Woman,&rdquo;
-            recorded in Nashville with overdubs in Miami. <a href="/listen.html">Hear it on the Listen page</a>.</p>
+            recorded in Nashville with overdubs in Miami. <a href="/listen.html#samples-h">Hear it on the Listen page</a>.</p>
         </div>
         <div class="tl-item">
           <span class="tl-date">1982</span>
@@ -193,15 +208,15 @@
         </div>
         <div class="tl-item">
           <span class="tl-date">2017</span>
-          <h3>MLewisPops.com launches</h3>
-          <p>Began releasing original pop music scored for symphony orchestra, composed and sequenced in
-            Digital Performer — the source of the original compositions on the Listen page.</p>
+          <h3>Begins the MLewisPops project</h3>
+          <p>Began composing original pop music scored for symphony orchestra, sequenced in Digital Performer —
+            the source of the original compositions on the <a href="/listen.html#midi-h">Listen page</a>.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section aria-labelledby="playing-h">
+  <section id="stage-credits" aria-labelledby="playing-h">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Playing days &middot; on stage with</span>
@@ -221,7 +236,7 @@
     </div>
   </section>
 
-  <section class="credits-marquee" aria-labelledby="clients-h">
+  <section class="credits-marquee" id="client-list" aria-labelledby="clients-h">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Client list &middot; behind the pen for</span>
@@ -266,6 +281,19 @@
         <span>Warner Bros. Publishing</span><span>Kendor Publications</span>
         <span>Kalmus Publications</span><span>Alfred Publications</span>
         <span class="more">And many more (really!)</span>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="book-h">
+    <div class="wrap" style="text-align:center;">
+      <div class="section-head" style="margin:0 auto;">
+        <span class="eyebrow">Available for engagements</span>
+        <h2 id="book-h">Booking an arranger, conductor or producer?</h2>
+      </div>
+      <div class="cta-row" style="justify-content:center;">
+        <a class="btn btn-primary" href="/contact.html">Start a conversation</a>
+        <a class="btn btn-ghost" href="/listen.html">Hear the work first</a>
       </div>
     </div>
   </section>
