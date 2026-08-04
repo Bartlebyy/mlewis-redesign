@@ -117,6 +117,19 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('hashchange', syncToScroll);
   }
 
+  // email reveal (contact page) — address is split across data attrs and only
+  // joined into a mailto: link on click, so it never appears in the HTML source for scrapers
+  const emailBtn = document.querySelector('.email-reveal');
+  if (emailBtn) {
+    emailBtn.addEventListener('click', () => {
+      const address = `${emailBtn.dataset.user}@${emailBtn.dataset.domain}`;
+      const link = document.createElement('a');
+      link.href = `mailto:${address}`;
+      link.textContent = address;
+      emailBtn.replaceWith(link);
+    });
+  }
+
   // contact form (static hosting: wire to Netlify Forms — see form's data-netlify attr)
   const form = document.querySelector('#contact-form');
   if (form) {
