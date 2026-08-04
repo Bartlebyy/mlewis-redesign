@@ -34,59 +34,54 @@
 
 <main>
 
-  <section class="marquee" style="padding-bottom:3rem;">
+  <section style="padding-top:3.2rem;">
     <div class="wrap">
-      <span class="eyebrow">Contact</span>
-      <h1 style="font-size:clamp(2.2rem,5vw,3.6rem);">How to reach me.</h1>
-      <p class="lede">Available for arrangements, orchestrations, and cruise ship productions. Tell me about your
-        project and I'll get back to you.</p>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap contact-grid">
-      <div>
-        <dl class="contact-direct">
-          <dt>Based in</dt>
-          <dd>South Florida</dd>
-          <dt>Working on</dt>
-          <dd>Big band, orchestral, Broadway-style &amp; sequenced arrangements</dd>
-          <dt>Response time</dt>
-          <dd>Within 2&ndash;3 business days</dd>
-        </dl>
-        <div class="credibility" style="margin-top:2rem;">
-          <span class="featured">Frank Sinatra</span>
-          <span class="featured">Rod Stewart</span>
-          <span class="featured">Bee Gees</span>
-          <span>Royal Caribbean</span>
-          <span>+ 50 more</span>
-        </div>
-        <blockquote style="margin-top:1.6rem;">Sparkling, scintillating jazz singing; no matter what she's
-          performing, be prepared to hear it differently than it's usually played.
-          <cite>All Music Guide, on <em>May I Come In</em> (2026)</cite>
-        </blockquote>
+      <div class="section-head">
+        <span class="eyebrow">Contact</span>
+        <h1 style="font-size:clamp(1.8rem,3.4vw,2.4rem); margin-top:.6rem;">How to reach me.</h1>
+        <p style="font-size:1rem; margin-top:.6rem;">Available for arrangements, orchestrations, and
+          cruise ship productions — tell me about your project and I'll get back to you.</p>
       </div>
-      <div>
-        <!-- Netlify Forms: no backend needed. Netlify auto-detects this at deploy time. -->
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
-          <input type="hidden" name="form-name" value="contact">
-          <p class="hidden" style="display:none;">
-            <label>Don't fill this out if you're human: <input name="bot-field"></label>
-          </p>
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required autocomplete="name">
+      <div class="contact-grid">
+        <div>
+          <dl class="contact-direct">
+            <dt>Based in</dt>
+            <dd>South Florida</dd>
+            <dt>Working on</dt>
+            <dd>Big band, orchestral, Broadway-style &amp; sequenced arrangements</dd>
+            <dt>Response time</dt>
+            <dd>Within 2&ndash;3 business days</dd>
+          </dl>
+          <div class="credibility" style="margin-top:2rem;">
+            <span class="featured">Frank Sinatra</span>
+            <span class="featured">Rod Stewart</span>
+            <span class="featured">Bee Gees</span>
+            <span>Royal Caribbean</span>
+            <span>+ 50 more</span>
           </div>
-          <div class="field">
-            <label for="email">Email address</label>
-            <input id="email" name="email" type="email" required autocomplete="email">
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required placeholder="Tell me about your project — timeline, instrumentation, and where it's headed."></textarea>
-          </div>
-          <button class="btn btn-primary" type="submit">Send message</button>
-        </form>
+        </div>
+        <div>
+          <!-- Netlify Forms: no backend needed. Netlify auto-detects this at deploy time. -->
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden" style="display:none;">
+              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </p>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="Tell me about your project — timeline, instrumentation, and where it's headed."></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send message</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
