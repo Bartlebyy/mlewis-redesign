@@ -28,10 +28,15 @@
 - [ ] **Homepage portrait**: `index.html` has an empty photo-frame placeholder in the hero
       ("Photo of Mike Lewis — drop into /img/mike-lewis-portrait.jpg"). Drop the file in at that
       path and it displays automatically — no other changes needed.
-- [ ] **About page portrait**: same placeholder pattern in the biography section of `about.html`
-      — drop in `/img/mike-lewis-bio.jpg`.
-- [ ] **Hero/OG image**: `og:image` in `index.html` currently points at the *old* site's hosted
-      `conductor_1.png` — swap for a locally-hosted photo once the real gallery images are in.
+- [ ] **About page portrait**: the bio-intro photo slot was removed (the only available candidate,
+      a 5-piece band photo where Mike is a small figure, was too weak as a lone bio anchor). About
+      now links out to the Gallery instead. Revisit if a stronger solo/near-solo photo turns up.
+- [x] ~~Homepage hero photo~~ — done. Real portrait in place at `/img/mike-lewis-portrait.jpg`
+      (hero photo-frame changed to a 1:1 ratio to fit it without cropping).
+- [x] ~~Hero/OG image~~ — `og:image` now points at the real portrait. Currently set to the
+      Netlify preview URL (`https://mlewis-redesign.netlify.app/img/mike-lewis-portrait.jpg`) so
+      link previews (Slack, etc.) show the right photo now — **switch to
+      `https://www.mlewis.com/img/mike-lewis-portrait.jpg` once the real domain is live.**
 - [x] ~~Favicon~~ — done. Real favicon (Icons8 music-note glyph, 16/32/96px PNGs) is live on all
       five pages.
 
