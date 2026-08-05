@@ -16,6 +16,18 @@
    301-redirects the old extensionless URLs (`/about`, `/listen`, etc.) to the `.html` form so
    existing search rankings and backlinks carry over.
 
+## Keeping "60 years" and similar figures from going stale
+- [x] ~~On-page "X years" text~~ — automated. The homepage lede's "For over 60 years" and
+      About's "compresses 56 years" / "Digging into 1970–2026" eyebrow now use
+      `<span class="years-since" data-since="1970">`/`<span class="current-year">`, computed by a
+      small script in `js/main.js` on every page load — no manual edits needed going forward.
+      The static number in the HTML is just a same-day-accurate fallback for no-JS clients/crawlers.
+- [ ] **Meta descriptions, og:description, and JSON-LD still say "60-year(s)" as plain static
+      text** — these are read by search engines and social-media link previews, which don't run
+      JavaScript, so they can't use the same fix. They'll drift by a year or two before becoming
+      noticeably stale; touch up manually every few years (search for "60-year" / "60 years" across
+      `index.html` and `about.html`).
+
 ## Before launch — content still needed from Mike
 
 ### Photos — the biggest remaining gap

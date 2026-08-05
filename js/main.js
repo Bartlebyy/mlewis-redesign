@@ -1,6 +1,16 @@
 // CalicoMusic — shared behavior
 
 document.addEventListener('DOMContentLoaded', () => {
+  // keep "X years since <year>" and the current year accurate without manual edits
+  const now = new Date();
+  document.querySelectorAll('.years-since').forEach((el) => {
+    const since = parseInt(el.dataset.since, 10);
+    if (!isNaN(since)) el.textContent = now.getFullYear() - since;
+  });
+  document.querySelectorAll('.current-year').forEach((el) => {
+    el.textContent = now.getFullYear();
+  });
+
   // mobile nav toggle
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('nav.primary');
