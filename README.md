@@ -60,7 +60,7 @@
 ### Gallery captions — fact-check placeholder copy
 The 7 photo captions on `gallery.html` were originally placeholder narrative text. Two are
 resolved from Mike's book transcript:
-- [x] ~~**Gold record photo**~~ — resolved: Celia Lipton Farris recordings, arranged/produced at
+- [x] ~~**Gold record photo**~~ — resolved: a full-orchestra recording arranged/produced at
       Criteria Studios, early 1980s.
 - [x] ~~**Barry Gibb photo**~~ — resolved: Miami Beach, 1975–76, during Bee Gees
       string-arrangement sessions at Criteria.
