@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday, Mike</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ink:       #1c2230;
+  --ink-soft:  #3a4256;
+  --paper:     #f6efdf;
+  --paper-line:#e5d9bc;
+  --brass:     #c08f4c;
+  --brass-deep:#9c6f34;
+  --marquee:   #8b3a3a;
+  --confetti:  #e0653f;
+  --confetti-2:#3f7d8b;
+  --confetti-3:#c9a13b;
+  --card-shadow: 0 30px 80px -20px rgba(28,34,48,.45);
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  height:100vh;
+  height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 1.25rem;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(192,143,76,.35), transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(139,58,58,.30), transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(63,125,139,.20), transparent 50%),
+    var(--ink);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* soft ambient marquee-light glow, respects reduced motion */
+body::before{
+  content:"";
+  position:fixed;
+  inset:-10%;
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, rgba(192,143,76,.55), transparent 60%),
+    radial-gradient(2px 2px at 80% 30%, rgba(224,101,63,.5), transparent 60%),
+    radial-gradient(2px 2px at 30% 70%, rgba(63,125,139,.5), transparent 60%),
+    radial-gradient(2px 2px at 60% 85%, rgba(201,161,59,.55), transparent 60%),
+    radial-gradient(2px 2px at 90% 65%, rgba(192,143,76,.5), transparent 60%),
+    radial-gradient(2px 2px at 45% 10%, rgba(139,58,58,.5), transparent 60%);
+  background-size: 100% 100%;
+  animation: twinkle 6s ease-in-out infinite alternate;
+  pointer-events:none;
+  z-index:0;
+}
+@keyframes twinkle{
+  from{ opacity:.5; }
+  to{ opacity:1; }
+}
+@media (prefers-reduced-motion: reduce){
+  body::before{ animation:none; opacity:.75; }
+}
+
+.confetti{
+  position:fixed;
+  top:-40px;
+  border-radius:2px;
+  opacity:.9;
+  z-index:0;
+  animation: fall linear infinite;
+}
+@keyframes fall{
+  to{ transform: translateY(115vh) rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce){
+  .confetti{ animation-duration: 40s; opacity:.35; }
+}
+
+.card{
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width: 580px;
+  max-height: 100%;
+  overflow-y:auto;
+  background: var(--paper);
+  border: 1px solid var(--paper-line);
+  border-radius: 22px;
+  box-shadow: var(--card-shadow);
+  padding: clamp(1.25rem, 4vh, 2.25rem) clamp(1.5rem, 5vw, 3rem);
+  text-align:center;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  font-size: .78rem;
+  letter-spacing: .22em;
+  text-transform:uppercase;
+  color: var(--brass-deep);
+  font-weight:600;
+}
+.eyebrow::before, .eyebrow::after{
+  content:"";
+  width: 22px;
+  height:1px;
+  background: var(--brass-deep);
+  opacity:.55;
+}
+
+h1{
+  font-family:'Fraunces', Georgia, serif;
+  font-weight:600;
+  font-size: clamp(1.9rem, 5.2vw, 2.7rem);
+  line-height:1.08;
+  margin: .75rem 0 .3rem;
+  color: var(--marquee);
+  text-wrap: balance;
+}
+h1 em{
+  font-style: italic;
+  color: var(--brass-deep);
+}
+
+.subhead{
+  font-family:'Fraunces', Georgia, serif;
+  font-size: clamp(1rem, 2.4vw, 1.15rem);
+  color: var(--ink-soft);
+  margin: 0 0 1rem;
+}
+
+.staff{
+  height: 1px;
+  background: var(--paper-line);
+  margin: 1rem auto;
+  width: 70%;
+}
+
+.note{
+  font-size: .95rem;
+  line-height:1.55;
+  color: var(--ink-soft);
+  max-width: 46ch;
+  margin: 0 auto 1.1rem;
+  text-align:left;
+}
+.note strong{ color: var(--ink); }
+
+.gift-box{
+  background: var(--ink);
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem 1.35rem;
+  margin: 0 0 1.1rem;
+  color: var(--paper);
+}
+.gift-box .label{
+  font-size:.68rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color: var(--brass);
+  font-weight:600;
+  margin-bottom:.5rem;
+  display:block;
+}
+.gift-box p{
+  margin: 0 0 .9rem;
+  font-size: .92rem;
+  line-height:1.5;
+  color: #d9ddea;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  background: var(--brass);
+  color: var(--ink);
+  font-weight:600;
+  font-size: .95rem;
+  text-decoration:none;
+  padding: .7rem 1.4rem;
+  border-radius: 999px;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  box-shadow: 0 10px 24px -8px rgba(192,143,76,.55);
+}
+.btn:hover, .btn:focus-visible{
+  background: #d3a25f;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px -8px rgba(192,143,76,.65);
+}
+.btn:focus-visible{
+  outline: 2px solid var(--paper);
+  outline-offset: 3px;
+}
+.btn svg{ width:18px; height:18px; flex-shrink:0; }
+
+.sign{
+  font-family:'Fraunces', Georgia, serif;
+  font-style:italic;
+  font-size: 1rem;
+  color: var(--ink-soft);
+  margin-top: .2rem;
+}
+
+</style>
+</head>
+<body>
+
+<div class="card">
+  <span class="eyebrow">A gift in progress</span>
+  <h1>Happy 88th, <em>Mike.</em></h1>
+  <p class="subhead">A lifetime of charts deserves a website to match.</p>
+
+  <div class="staff"></div>
+
+  <p class="note">
+    For your birthday this year, I've been quietly working on something: a full
+    redesign of your website &mdash; new look, your real story front and center,
+    your recordings easier to find, and the whole thing built to actually help
+    people book you.
+  </p>
+
+  <div class="gift-box">
+    <span class="label">Work in progress &mdash; not live yet</span>
+    <p>It's not finished, but it's far enough along that I wanted you to see it
+      early. Take a look whenever you have a few minutes, and let me know what
+      you think &mdash; what's missing, what you'd change, anything at all.</p>
+    <a class="btn" href="https://mlewis-redesign.netlify.app/" target="_blank" rel="noopener">
+      See the new site
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+    </a>
+  </div>
+
+  <p class="sign">With love &mdash; Diego</p>
+</div>
+
+<script src="/js/birthday.js"></script>
+
+</body>
+</html>
